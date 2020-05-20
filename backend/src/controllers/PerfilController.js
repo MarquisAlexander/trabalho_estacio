@@ -8,6 +8,6 @@ module.exports = {
         .where('user_id', user_id)
         .select('*')
 
-        return response.json(tb_task);
+        return response.json(tb_task)
     }
 }
