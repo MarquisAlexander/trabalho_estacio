@@ -11,6 +11,8 @@ routes.get('/screen_perfil', PerfilController.index);
 //rota para cadastro de tb_users
 routes.post('/tb_users', UserController.create);
 
-routes.post('/tb_task',TaskController.create );
+routes.post('/tb_task',TaskController.create);
+routes.delete('/tb_task/:id', TaskController.delete);
+routes.post('/tb_task/:id', TaskController.index);
 
 module.exports = routes;
