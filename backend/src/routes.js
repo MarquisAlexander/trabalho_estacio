@@ -3,8 +3,11 @@ const express = require('express');
 const UserController = require('./controllers/UserController');
 const TaskController = require('./controllers/TaskController');
 const PerfilController = require('./controllers/PerfilController');
+const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
+
+routes.pos('/session', SessionController.create);
 
 routes.get('/screen_perfil', PerfilController.index);
 
