@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-
+import { useHistory } from 'react-router-dom';
 export default function Register() {
 
     const [name, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [whatsapp, setWhatsapp] = useState('')
+
+    const history = useHistory();
 
     async function Register(e) {
         e.preventDefault();
@@ -15,11 +17,20 @@ export default function Register() {
             whatsapp
         };
 
+        try {
+            alert(`Suas informações de acesso são`)
+
+            history.push('/')
+        }catch(err) {
+            alert('Erro no cadastro, tente novamente.');
+        }
+
         console.log(data);
     }
 
     return (
     <div className="register-container">
+
         <div className="content">
             <form onSubmit={Register}>
                 <input 
