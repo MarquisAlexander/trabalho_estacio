@@ -1,0 +1,125 @@
+.new-task-container {
+    width: 100%;
+    max-height: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-task-container .content {
+    width: 90%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-task-container .content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.new-task-container .content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.new-task-container .content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.new-task-container .content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.new-task-container .content form input {
+    margin-top: 6px;
+}
+
+.new-task-container .content form textarea{
+    margin-top: 8px;
+}
+
+.new-task-container .content form p{
+    font-size: 24px;
+    color: #737380;
+    line-height: 32px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.buttonPrioridadeBaixa{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeBaixa:hover {
+    filter: brightness(60%)
+}
+
+.buttonPrioridadeMedia{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-left: 21px;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeMedia:hover {
+    filter: brightness(60%)
+}
+
+.buttonPrioridadeAlta{
+    width: 30%;
+    height: 60px;
+    background: #0078E7;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-left: 21px;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+}
+
+.buttonPrioridadeAlta:hover {
+    filter: brightness(60%)
+}

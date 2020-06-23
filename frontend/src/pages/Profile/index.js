@@ -5,6 +5,8 @@ import { FaCalendarCheck, FaCheck, FaInbox }from "react-icons/fa";
 
 import api from '../../services/api';
 
+import logo from '../../assets/logo.svg';
+
 import './styles.css';
 
 export default function Profile() {
@@ -56,9 +58,12 @@ export default function Profile() {
         <>
         <div className="profile-container">
             <header>
+
+                <img src={logo} alt="minhas tarefas" />
+
                 <span> Bem vindo(a), {userName}</span>
 
-                <Link className="button01" to="/task/new">Cadastrar nova tarefa</Link>
+                <Link className="button01" to="/newtask">Cadastrar nova tarefa</Link>
                 <button onClick={handleLogout}type="button">
                     <FiPower size={18} color="#0078E7" />
                 </button>
@@ -82,12 +87,10 @@ export default function Profile() {
                     <p>{task.responsavel}</p>
 
                     <button onClick={() => handleTerminarTarefa(task.id)}type="button">
-                        <p></p>
                         <FaCheck size={40} color="#80C55F" />
                     </button>
                 
-                    <button onClick={() => handleTerminarTarefa(task.id)}type="button">
-                        <p></p>
+                    <button onClick={() => handleTerminarTarefa(task.id)}type="button">    
                         <FiTrash2 size={40} color="#DB3B3B" />
                     </button>
               

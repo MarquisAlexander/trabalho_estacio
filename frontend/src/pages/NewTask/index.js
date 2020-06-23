@@ -4,6 +4,8 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 import api from '../../services/api.js';
 
+import logo from '../../assets/logo.svg';
+
 import './styles.css';
 
 export default function NewTask() {
@@ -33,17 +35,17 @@ export default function NewTask() {
                 }
             })
 
-            history.push('/register');
+            history.push('/profile');
         }catch{
             alert('erro ao cadastrar caso, tente novamente');
         }
     }
 
     return (
-        <div className="new-incident-container">
+        <div className="new-task-container">
             <div className="content">
                 <section>
-
+                    <img src={logo} alt="minhas tarefas" />
                     <h1>Cadastrar novas tarefas</h1>
                     <p>Descreva a tarefa detalhadamente para uma melhor compreensão no futuro</p>
                     
@@ -67,7 +69,7 @@ export default function NewTask() {
                     />
 
                     <input 
-                        placeholder="Responsável pela tarefa"
+                        placeholder="ID do responsável pela tarefa"
                         value={responsavel}
                         onChange={e => setResponsavel(e.target.value)}
                     />

@@ -4,6 +4,10 @@ import {FiLogIn} from 'react-icons/fi';
 
 import api from '../../services/api.js';
 
+import logo from '../../assets/logo.svg';
+
+import './styles.css'
+
 export default function Logon() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -21,7 +25,7 @@ export default function Logon() {
             localStorage.setItem('userName', response.data.name);
             localStorage.setItem('userId', response.data.id);
 
-            history.push('/newtask');
+            history.push('/profile');
         } catch (err){
             alert("Falha ao fazer o login, tente novamente!")
         }
@@ -30,23 +34,29 @@ export default function Logon() {
 
     return (
         <div className="logon-container">
-            <section>
+            <section className="form">
+
+                <img src={logo} alt="Minhas tarefas" />
+
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
                     <input
+                    required
                     value={email}
-                    placeholder="id"
+                    placeholder="E-mail"
                     onChange={e => setEmail(e.target.value)} />
 
-                    <input          
+                    <input
+                    required   
+                    type="password"     
                     value={senha}
-                    placeholder="id"
+                    placeholder="senha"
                     onChange={e => setSenha(e.target.value)} />
 
                 <button className="button" type="submit">Entrar</button>
 
                 <Link className="back-link" to="/register">
-                    <FiLogIn size={16} color="#fd7"/>
+                    <FiLogIn size={16} color="#0078E7"/>
                     Não tenho login
                 </Link>
                 </form>
