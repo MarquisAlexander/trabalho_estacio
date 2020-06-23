@@ -7,7 +7,7 @@ const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
-routes.pos('/session', SessionController.create);
+routes.post('/session', SessionController.create);
 
 routes.get('/screen_perfil', PerfilController.index);
 

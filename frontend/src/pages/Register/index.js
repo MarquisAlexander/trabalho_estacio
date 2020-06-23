@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import api from '../../services/api.js';
+
 export default function Register() {
 
     const [name, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [whatsapp, setWhatsapp] = useState('')
+    const [senha, setSenha] = useState('')
 
     const history = useHistory();
 
@@ -14,11 +18,14 @@ export default function Register() {
         const data = {
             name,
             email,
-            whatsapp
+            whatsapp,
+            senha
         };
 
         try {
-            alert(`Suas informações de acesso são`)
+            const response = await api.post('tb_users', data)
+
+            alert(`use seu email e senha para acessar sua conta`)
 
             history.push('/')
         }catch(err) {
@@ -44,11 +51,16 @@ export default function Register() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}/>
 
-                <input 
+                <input
                 maxLength={11}
                 placeholder="Whatsapp"
                 value={whatsapp}
                 onChange={e => setWhatsapp(e.target.value)}/>
+
+                <input 
+                placeholder="senha"
+                value={senha}
+                onChange={e => setSenha(e.target.value)}/>
 
                 <button className="button" type="submit">Cadastrar</button>
                 

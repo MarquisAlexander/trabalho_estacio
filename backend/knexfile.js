@@ -5,11 +5,10 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      host: 'controletarefa.cb8wpsrs2beg.us-east-2.rds.amazonaws.com',
-      database: 'controletarefa',
-      user:     'marquissantos',
-      password: 'mm1234mm1234',
-      timeout: 100000
+      host: 'localhost',
+      database: 'dbtest',
+      user: 'root',
+      password: 'marquis1234',
     },
 
     migrations: {
